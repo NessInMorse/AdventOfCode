@@ -34,7 +34,7 @@ function part2()
                 a = parse(Int32, s1[1]):parse(Int32, s1[2])
                 b = parse(Int32, s2[1]):parse(Int32, s2[2])
 
-                if any([i ∈ b for i in a])
+                if any(map(x -> x ∈ b, a))
                         count += 1
                 end
         end
