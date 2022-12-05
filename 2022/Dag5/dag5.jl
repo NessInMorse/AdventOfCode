@@ -21,7 +21,7 @@ function part1()
                         cargo = ["" for i ∈ 1:parse(Int32, (split(i, " ")[end-1]))]
                 end
         end
-        # cargo = ["NZ", "DCM", "P"]
+
         start = false
         for i in raw
                 if start
@@ -62,7 +62,7 @@ function part2()
                         cargo = ["" for i ∈ 1:parse(Int32, (split(i, " ")[end-1]))]
                 end
         end
-        # cargo = ["NZ", "DCM", "P"]
+
         start = false
         for i in raw
                 if start
