@@ -29,14 +29,14 @@ def main():
                         for j in range(power):
                                 knots[0][0] += 1
                                 for x in range(len(knots[1:])):
-                                        if abs(knots[x][0] - knots[x + 1][0]) > 1 or abs(knots[x][0] - knots[x + 1][0]) > 1:
+                                        if abs(knots[x][0] - knots[x + 1][0]) > 1 or abs(knots[x][1] - knots[x + 1][1]) > 1:
                                                 knots[x + 1] = overcorrect(knots[x], knots[x + 1])
                                                 tailpositions[x].append(knots[x + 1].copy())
                 elif command == "L":
                         for _ in range(power):
                                 knots[0][0] -= 1
                                 for x in range(len(knots[1:])):
-                                        if abs(knots[x][0] - knots[x + 1][0]) > 1 or abs(knots[x][0] - knots[x + 1][0]) > 1:
+                                        if abs(knots[x][0] - knots[x + 1][0]) > 1 or abs(knots[x][1] - knots[x + 1][1]) > 1:
                                                 knots[x + 1] = overcorrect(knots[x], knots[x + 1])
                                                 tailpositions[x].append(knots[x + 1].copy())
                 elif command == "U":
